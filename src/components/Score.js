@@ -74,7 +74,7 @@ const Score = props => {
     useEffect(() => {
 
         const url=`/api/v1/scores/${selectedCountry}`
-        console.log(url);
+       
         axios.get(url)
                 .then(response => {
                     if(response) {
@@ -124,7 +124,7 @@ const Score = props => {
                               
                         {displayCountries ?
                         <div className='countryModal'>
-                         {countryFlagEmoji.list.map((country, index) => <img className='chooseFlag' src={`https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/${country.code}.svg`} alt={country.name} onClick={() =>handleFlags(country.name)} />
+                         {countryFlagEmoji.list.map((country, index) => <img key={index} className='chooseFlag' src={`https://cdn.jsdelivr.net/npm/country-flag-emoji-json@2.0.0/dist/images/${country.code}.svg`} alt={country.name} onClick={() =>handleFlags(country.name)} />
                         )}
                         </div>
 

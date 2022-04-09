@@ -41,9 +41,7 @@ const App = props => {
         if (pairs < initialPairs+4){ 
             setLevelStatus(!levelStatus);
             handleStartBtn();
-            console.log('levelStatus');
         } else{
-            console.log("End Game");
             setEndGame(!endGame);
         }
      }
